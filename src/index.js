@@ -12,7 +12,7 @@ import reducer from './reducers';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Provider>
+  <Provider store={store} >
     <BrowserRouter>
       <App />
     </BrowserRouter>
