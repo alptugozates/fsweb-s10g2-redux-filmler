@@ -1,9 +1,14 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { addFavorite } from '../actions/favoritesActions';
 
 
 const FavoriteMovieList = (props) => {
-  const favorites = [];
+  const favorites = useSelector(store => store.favorites.favorites);
+  const displayFavorites = useSelector(store => store.favorites.displayFavorites);
+  console.log("favoriler:", favorites)
+
 
   return (
     <div className="flex-1 sm:max-w-[250px] p-5 pr-5 bg-white shadow rounded-md">
