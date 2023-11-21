@@ -18,6 +18,7 @@ const Movie = (props) => {
     push("/movies")
 
   }
+
   const favorites = useSelector(store => store.favorites.favorites);
 
   const handleAddFavorite = () => {
@@ -38,7 +39,7 @@ const Movie = (props) => {
       <div className='px-5 py-3'>
         <div className='py-1 flex'>
           <div className='view-label'>İsim</div>
-          <div className="flex-1">{movie.title}</div>
+          <div className="flex-1">{movie?.title}</div>
         </div>
         <div className='py-1 flex'>
           <div className='view-label'>Yönetmen</div>
