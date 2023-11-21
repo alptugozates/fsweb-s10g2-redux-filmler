@@ -2,9 +2,12 @@ import React from 'react';
 
 import MovieListItem from './MovieListItem';
 import MovieListFooter from './MovieListFooter';
+import { useSelector } from 'react-redux';
 
 const MovieList = (props) => {
-  const movies = [];
+
+  const movies = useSelector(state => state.movies.movies)
+  console.log("movies:", movies)
 
   return (
     <div className="flex-1">
