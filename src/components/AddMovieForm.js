@@ -7,6 +7,7 @@ const AddMovieForm = (props) => {
   const { push } = useHistory();
   const dispatch = useDispatch();
   const [movie, setMovie] = useState({
+    id: Date.now(),
     title: "",
     director: "",
     genre: "",
